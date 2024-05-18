@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: Montserrat;        
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Завдання 1</h2>
+        <div class="form-group">
+            <label for="productName">Назва продукта</label>
+            <input type="text" id="productName">
+        </div>
+        <div class="form-group">
+            <label for="productPrice">Ціна продукта</label>
+            <input type="number" id="productPrice">
+        </div>
+        <div class="form-group">
+            <label for="productQuantity">Кількість продукта</label>
+            <input type="number" id="productQuantity">
+        </div>
+        <div class="buttons">
+            <button onclick="createAndLogProduct()">Вивести продукт</button>
+            <button onclick="logTotalPrice()">Вивести загальну ціну продукта</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Завдання 3</h2>
+        <button onclick="filterMedicines()">Відсортувати медикаменти</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Завдання 5</h2>
+        <h4>Фрукти зі знижкою</h4>
+        <button onclick="displayFruits()">Застосувати знижку</button>
+        <div id="resultContainer"></div>
+    </div>
+
+    <div class="container">
+        <h2>Завдання 7</h2>
+        <label for="loginInput">Login:</label>
+        <input type="text" id="loginInput" placeholder="Введіть логін">
+        <br>
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" placeholder="Введіть email">
+        <br>
+        <button onclick="updateClient()">Оновити інформацію</button>
+        <br>
+        <h2>Поточна інформація:</h2>
+        <p>Login: <span id="currentLogin"></span></p>
+        <p>Email: <span id="currentEmail"></span></p>
+    </div>
+
+    <div class="container">
+        <h2>Завдання 9</h2>
+        <button onclick="displayTagCounts()">Відобразити кількість тегів</button>
+        <div id="tagCounts"></div>
+    </div>
+
+    <div class="container">
+        <h2>Завдання 10</h2>
+        <label for="codeInput">Введіть текст</label>
+        <textarea id="codeInput"></textarea>
+        <br>
+        <button onclick="checkCode()">Перевірити дужки</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
